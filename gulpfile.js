@@ -184,7 +184,7 @@ gulp.task('img', function () {
         .pipe(gulp.dest(dev.img));
 });
 
-gulp.task('imgProd', ['img'], function () {
+gulp.task('imgProd', function () {
     return gulp.src(dev.img + '*')
         .pipe(cache(imagemin({
             progressive: true,
